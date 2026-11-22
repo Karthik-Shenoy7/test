@@ -1,0 +1,2 @@
+Three.js - The MIT License (MIT)
+Copyright (c) 2010-2023 Three.js Authors

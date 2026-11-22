@@ -1,0 +1,227 @@
+.hero-scope-card .scope-legend,
+.hero-scope-header .scope-legend {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* ==========================================================================
+   physics.css - Specialized Interactive Physics & Circuit Visualizations
+   ========================================================================== */
+
+/* 3D Chamber Overlays and Viewports */
+.chamber-viewport {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #09090b; border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+}
+
+.chamber-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Chamber Floating Legend */
+.chamber-legend {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: #181b20;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: #e7e5e0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e7e5e0;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.dot-gate { background: #f59e0b; }
+.dot-ox { background: #38bdf8; opacity: 0.7; }
+.dot-channel { background: #3b82f6; }
+.dot-source { background: #10b981; }
+.dot-sub { background: #475569; }
+.dot-carrier { background: #e0f2fe; border-radius: 50%; }
+
+/* Status Region Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.sat {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.status-badge.triode {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.status-badge.cutoff {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.4);
+}
+
+.status-badge.active-bjt {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fafafa;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Oscilloscope Style Display */
+.scope-screen {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: #09090b;
+  border: 1px solid #1e293b;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.scope-screen canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.scope-legend {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: flex;
+  gap: 16px;
+  background: #181b20;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  z-index: 10;
+}
+
+.scope-ch1 { color: var(--scope-ch1, #fbbf24); }
+.scope-ch2 { color: var(--scope-ch2, #38bdf8); }
+.scope-ref { color: #ef4444; }
+
+/* Interactive Circuit Diagram Container */
+.schematic-box {
+  background: #09090b;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.schematic-box svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2D Plot Grid & Canvas */
+.plot-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: #09090b;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.plot-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Numerical Step by Step Display */
+.calc-breakdown {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: #121215;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.calc-breakdown span.highlight {
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+.calc-breakdown span.res {
+  color: #34d399;
+  font-weight: 700;
+}
+
+/* Tooltip & Pointer Info */
+.info-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(18, 18, 21, 0.95);
+  border: 1px solid var(--accent-cyan);
+  color: var(--text-main);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+/* ── Prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.eq { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }

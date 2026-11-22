@@ -1,0 +1,2 @@
+KaTeX - The MIT License (MIT)
+Copyright (c) 2013-2023 Khan Academy and other contributors
